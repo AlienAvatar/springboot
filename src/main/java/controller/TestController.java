@@ -1,6 +1,7 @@
 package controller;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,9 +17,7 @@ public class TestController {
     }
 
     @RequestMapping("/test")
-    public ModelAndView test(){
-        ModelAndView mv = new ModelAndView();
-        mv.setViewName("/index.jsp");
-        return mv;
+    public String test(){
+        return "index";
     }
 }
