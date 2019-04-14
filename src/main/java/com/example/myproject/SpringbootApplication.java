@@ -1,5 +1,6 @@
 package com.example.myproject;
 
+import controller.LoginController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
@@ -20,5 +21,10 @@ public class SpringbootApplication {
     @Bean
     public TestController testController(){
         return new TestController();
+    }
+
+    @Bean
+    public LoginController loginController(){
+        return new LoginController();
     }
 }
