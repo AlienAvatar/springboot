@@ -1,6 +1,6 @@
 package com.example.myproject;
 
-import controller.TestController;
+import com.example.myproject.project.controller.base.TestController;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,4 +1,4 @@
-package entity;
+package com.example.myproject.project.entity;
 
 public class Login {
     private String pkid;

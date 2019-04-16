@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="dao.LoginMapper" >
-  <resultMap id="BaseResultMap" type="entity.Login" >
+<mapper namespace="com.example.myproject.project.dao.LoginMapper" >
+  <resultMap id="BaseResultMap" type="com.example.myproject.project.entity.Login" >
     <id column="pkid" property="pkid" jdbcType="VARCHAR" />
     <result column="user" property="user" jdbcType="VARCHAR" />
     <result column="password" property="password" jdbcType="VARCHAR" />
@@ -11,83 +11,11 @@
   <sql id="Base_Column_List" >
     pkid, user, password, isDelete, email
   </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
-    select 
-    <include refid="Base_Column_List" />
-    from login
-    where pkid = #{pkid,jdbcType=VARCHAR}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
-    delete from login
-    where pkid = #{pkid,jdbcType=VARCHAR}
-  </delete>
-  <insert id="insert" parameterType="entity.Login" >
+  <insert id="insert" parameterType="com.example.myproject.project.entity.Login" >
     insert into login (pkid, user, password, 
       isDelete, email)
     values (#{pkid,jdbcType=VARCHAR}, #{user,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
       #{isdelete,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="entity.Login" >
-    insert into login
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="pkid != null" >
-        pkid,
-      </if>
-      <if test="user != null" >
-        user,
-      </if>
-      <if test="password != null" >
-        password,
-      </if>
-      <if test="isdelete != null" >
-        isDelete,
-      </if>
-      <if test="email != null" >
-        email,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="pkid != null" >
-        #{pkid,jdbcType=VARCHAR},
-      </if>
-      <if test="user != null" >
-        #{user,jdbcType=VARCHAR},
-      </if>
-      <if test="password != null" >
-        #{password,jdbcType=VARCHAR},
-      </if>
-      <if test="isdelete != null" >
-        #{isdelete,jdbcType=VARCHAR},
-      </if>
-      <if test="email != null" >
-        #{email,jdbcType=VARCHAR},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="entity.Login" >
-    update login
-    <set >
-      <if test="user != null" >
-        user = #{user,jdbcType=VARCHAR},
-      </if>
-      <if test="password != null" >
-        password = #{password,jdbcType=VARCHAR},
-      </if>
-      <if test="isdelete != null" >
-        isDelete = #{isdelete,jdbcType=VARCHAR},
-      </if>
-      <if test="email != null" >
-        email = #{email,jdbcType=VARCHAR},
-      </if>
-    </set>
-    where pkid = #{pkid,jdbcType=VARCHAR}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="entity.Login" >
-    update login
-    set user = #{user,jdbcType=VARCHAR},
-      password = #{password,jdbcType=VARCHAR},
-      isDelete = #{isdelete,jdbcType=VARCHAR},
-      email = #{email,jdbcType=VARCHAR}
-    where pkid = #{pkid,jdbcType=VARCHAR}
-  </update>
+
 </mapper>

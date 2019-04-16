@@ -1,7 +1,7 @@
 $(document).ready(function () {
-   console.log(123);
+   console.log(111);
 });
 
 function register() {
-    window.open("http://localhost:8088/register");
+    window.location.href="http://localhost:8088/register";
 }
