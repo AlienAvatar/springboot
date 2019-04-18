@@ -11,7 +11,7 @@
     <script type="text/javascript" src="../js/jquery.min.js" ></script>
 
     <!--page js-->
-    <script type="text/javascript" src="../js/main.js" ></script>
+    <script type="text/javascript" src="../js/register.js" ></script>
 </head>
 <body>
 <div class="modal-content">
@@ -24,7 +24,6 @@
     <!-- Begin # DIV Form -->
     <div id="div-forms">
         <!-- Begin # Login Form -->
-        <form id="login-form" action="/login">
             <div class="modal-body">
                 <div id="div-login-msg">
                     <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
@@ -36,13 +35,12 @@
             </div>
             <div class="modal-footer">
                 <div>
-                    <button type="submit" class="btn btn-primary btn-lg btn-block">SignIn</button>
+                    <button type="button" id="signIn" class="btn btn-primary btn-lg btn-block" onclick="submitRegister();">SignIn</button>
                 </div>
                 <div>
-                    <button id="login_reset_btn" type="button" class="btn btn-link">Reset</button>
+                    <button id="login_reset_btn" type="button" class="btn btn-link" onclick="resetRegister();">Reset</button>
                 </div>
             </div>
-        </form>
         <!-- End # Login Form -->
     </div>
 </div>

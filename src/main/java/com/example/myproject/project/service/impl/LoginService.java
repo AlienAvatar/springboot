@@ -16,13 +16,17 @@ public class LoginService implements LoginServiceImpl {
 
     @Override
     public int insertLogin(String username, String password, String email) {
-        Login login = new Login();
-        UUID uuid = UUID.randomUUID();
-        login.setUser(username);
-        login.setPassword(password);
-        login.setPkid(uuid.toString());
-        login.setEmail(email);
-        int re = loginMapper.insert(login);
+        Integer tmp = loginMapper.selectLoginByUsername(username);
+        int re = 0;
+        if(tmp == null) {
+            Login login = new Login();
+            UUID uuid = UUID.randomUUID();
+            login.setUser(username);
+            login.setPassword(password);
+            login.setPkid(uuid.toString());
+            login.setEmail(email);
+            re = loginMapper.insert(login);
+        }
         return re;
     }
 }
