@@ -30,6 +30,22 @@ public class LoginController {
         }else{
             return "user";
         }
+    }
 
+    @RequestMapping(value = "/main", method = RequestMethod.POST)
+    @ResponseBody
+    public String main(@RequestParam("user")String user,
+                       @RequestParam("password")String password){
+        int re = loginService.selectLogin(user,password);
+        if(re > 0) {
+            return "success";
+        }else{
+            return "fail";
+        }
+    }
+
+    @RequestMapping("/loginIn")
+    public String loginIn(){
+        return "main";
     }
 }

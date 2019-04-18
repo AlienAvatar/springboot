@@ -16,9 +16,9 @@ public class LoginService implements LoginServiceImpl {
 
     @Override
     public int insertLogin(String username, String password, String email) {
-        Integer tmp = loginMapper.selectLoginByUsername(username);
+        Login check = loginMapper.selectLoginByUsername(username);
         int re = 0;
-        if(tmp == null) {
+        if(!check.getUser().equals(username)) {
             Login login = new Login();
             UUID uuid = UUID.randomUUID();
             login.setUser(username);
@@ -28,5 +28,14 @@ public class LoginService implements LoginServiceImpl {
             re = loginMapper.insert(login);
         }
         return re;
+    }
+
+    @Override
+    public int selectLogin(String username, String password) {
+        Login check = loginMapper.selectLoginByUsername(username);
+        if(check.getPassword().equals(password)){
+            return 1;
+        }
+        return 0;
     }
 }

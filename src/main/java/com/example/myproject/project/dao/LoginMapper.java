@@ -10,6 +10,6 @@ import org.mybatis.spring.annotation.MapperScan;
 public interface LoginMapper {
     int insert(Login record);
 
-    @Select("select user from login where user=#{user}")
-    Integer selectLoginByUsername(@Param("user") String user);
+    @Select("select user,password from login where user=#{user}")
+    Login selectLoginByUsername(@Param("user") String user);
 }
