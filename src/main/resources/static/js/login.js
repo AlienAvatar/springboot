@@ -12,6 +12,12 @@ function submitLogin() {
     var param = {
         user :user,
         password : password
+    };
+    if(user === ""){
+        alert("请输入用户名")
+    }
+    if(password === ""){
+        alert("请输入密码")
     }
     $.ajax({
         url:"/main",

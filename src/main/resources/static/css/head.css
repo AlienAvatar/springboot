@@ -1,0 +1,35 @@
+ul {
+    list-style: none;
+}
+
+.daohanglan {
+    height: 55px;
+    margin-top: 5px;
+    /*颜色从左到右进行变换*/
+    background-image: linear-gradient(to right, #005cbf 0%, #28a745 100%);
+    /* background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);*/
+
+}
+
+.daohanglan .big3 {
+    width: 1226px;
+    margin: auto;
+}
+
+.daohanglan .big3 ul li {
+    float: left;
+}
+
+.daohanglan .big3 ul li .erjicaidan2 {
+    color: #fff;
+    font-size: 16px;
+    line-height: 55px;
+    padding: 19px 30px;
+}
+
+.daohanglan .big3 ul .youfudong span {
+    cursor: pointer;
+    color: #fff;
+    padding: 19.5px 30px;
+    float: right;
+}

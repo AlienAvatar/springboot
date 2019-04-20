@@ -1,0 +1,28 @@
+.footer{
+    background-color: #f8f8f8;
+    height:50px;
+}
+
+.footer .links{
+    position: relative;
+    text-align: center;
+    border-bottom: 1px solid #3d424a
+}
+
+.footer .links a{
+    color: #000000;
+    font-size: 16px;
+    line-height: 55px;
+    padding: 10px;
+    font-style: normal;
+}
+
+.footer .links a:hover {
+    color: blue;
+}
+
+.footer .copyright{
+    background-color: #f8f8f8;
+    text-align: center;
+    height: 120px;
+}
