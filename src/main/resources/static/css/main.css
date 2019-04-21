@@ -2,7 +2,29 @@
     width:auto;
 }
 
+/*Carousel*/
+#myCarousel .carousel-indicators li {
+    width: 50px;
+    height: 5px;
+    border-radius: 1px;
+}
 
+.carousel-indicators .active {
+    margin: 1px 0;
+}
+
+/*缩略图*/
+.row{
+    margin-top: 70px;
+}
+
+.row .col-xs-3 {
+    width:150px;
+}
+
+div.col-xs-3{
+    text-align:center;
+}
 
 
 

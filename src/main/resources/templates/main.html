@@ -30,7 +30,7 @@
                       style="padding-left: 50px;">
                     <div class="form-group">
                         <img src="/img/logo.png" style="display: block; padding: 20px 151px">
-                        <div class="erweima"><img src="images/二维码.jpg" style="position: absolute;width: 130px;
+                        <div class="erweima"><img src="img/二维码.jpg" style="position: absolute;width: 130px;
 						height: 130px;bottom: 136px;right: 31px;">
                             <p style="position: absolute;right: 64px;bottom: 106px;">联系我们</p>
                         </div>
@@ -96,6 +96,9 @@
 							</span>
                             </div><!-- /input-group -->
                         </div><!-- /.col-lg-6 -->
+                        <div id="clock">
+                            <p class="time">{{ time }}</p>
+                        </div>
                     </div><!-- /.row -->
                 </form>
             </div>
@@ -115,6 +118,8 @@
         </nav>
     </div>
 </div>
+
+
 <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---
 
                                                    下方nav标签导航栏开始）
@@ -124,16 +129,16 @@
     <div class="big3">
         <ul>
             <li><a class="gudingbeij erjicaidan2" href="#">首页</a></li>
-            <li><a class=" erjicaidan2" href="http://localhost:8080/test/bangdan.html">榜单</a></li>
-            <li><a class="erjicaidan2" href="http://localhost:8080/test/mv.html">MV</a></li>
+            <li><a class=" erjicaidan2" href="http://localhost:8080/test/bangdan.html">DVA</a></li>
+            <li><a class="erjicaidan2" href="http://localhost:8080/test/mv.html">麦克雷</a></li>
             <li class="dropdown">
                 <!--<a class="erjicaidan2" href="#" class="dropdown-toggle" data-toggle="dropdown">
                     更多 <b class="caret"></b>
                 </a>-->
                 <ul class="dropdown-menu">
-                    <li><a class="erjicaidan" href="http://localhost:8080/test/musicRadio.html">电台</a></li>
-                    <li><a class="erjicaidan" href="http://localhost:8080/test/songlist.html">歌单</a></li>
-                    <li><a class="erjicaidan" href="http://localhost:8080/test/singer.html">歌手</a></li>
+                    <li><a class="erjicaidan" href="http://localhost:8080/test/musicRadio.html">76</a></li>
+                    <li><a class="erjicaidan" href="http://localhost:8080/test/songlist.html">cs</a></li>
+                    <li><a class="erjicaidan" href="http://localhost:8080/test/singer.html">go</a></li>
                 </ul>
             </li>
         </ul>
@@ -141,15 +146,102 @@
             <li class="youfudong"><a href="http://localhost:8080/test/musicSearchTest.html" target="_blank"><span
                     class="glyphicon glyphicon-search" style="font-size: 14px"> 搜索</span></a></li>
             <li class="youfudong"><a href="http://localhost:8080/test/musician.html" target="_blank"><span
-                    class="glyphicon glyphicon-headphones" style="font-size: 14px"> 音乐人</span></a></li>
-            <li class="youfudong"><span class="glyphicon glyphicon-music" style="font-size: 14px"> 轻语LIVE</span></li>
+                    class="glyphicon glyphicon-headphones" style="font-size: 14px"> 76</span></a></li>
+            <li class="youfudong"><span class="glyphicon glyphicon-music" style="font-size: 14px"> cs</span></li>
             <li class="youfudong"><a href="http://localhost:8080/test/QQmusic.html" target="_blank"><span
-                    class="glyphicon glyphicon-star-empty" style="font-size: 14px"> 在线播放</span></a></li>
+                    class="glyphicon glyphicon-star-empty" style="font-size: 14px"> go</span></a></li>
         </ul>
     </div>
     </div>
 </nav>
 
+<!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---
+
+                                                   轮播图
+
+--><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- 轮播（Carousel）指标 -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <!-- 轮播（Carousel）项目 -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="/img/z3.jpg" alt="First slide" style="height: 400px; width: 100%">
+        </div>
+        <div class="item">
+            <img src="/img/z2.jpeg" alt="Second slide" style="height: 400px; width: 100%">
+        </div>
+        <div class="item">
+            <img src="/img/z1.jpg" alt="Third slide" style="height: 400px; width: 100%">
+        </div>
+    </div>
+    <!-- 轮播（Carousel）导航 -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---
+
+                                           缩略图
+
+--><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+<div class="row">
+    <div class="col-xs-3 " >
+        <a href="#" class="thumbnail">
+            <img src="http://how2j.cn/study/gareen.jpg">
+        </a>
+        <div class="caption">
+            <div class="text-muted">德玛西亚之力</div>
+            <br>
+            <p><a href="#" class="btn btn-primary" role="button">选中</a></p>
+        </div>
+    </div>
+    <div class="col-xs-3 ">
+        <a href="#" class="thumbnail">
+            <img src="http://how2j.cn/study/annie.jpg">
+        </a>
+        <div class="caption">
+            <div class="text-muted">黑暗之力</div>
+            <br>
+            <a href="#" class="btn btn-primary" role="button">选中</a></p>
+        </div>
+    </div>
+    <div class="col-xs-3 ">
+        <a href="#" class="thumbnail">
+            <img src="http://how2j.cn/study/teemo.jpg">
+        </a>
+        <div class="caption">
+            <div class="text-muted">迅捷斥候</div>
+            <br>
+            <a href="#" class="btn btn-primary" role="button">选中</a></p>
+        </div>
+    </div>
+    <div class="col-xs-3 ">
+        <a href="#" class="thumbnail">
+            <img src="http://how2j.cn/study/katarina.jpg">
+        </a>
+        <div class="caption">
+            <div class="text-muted">不详之刃</div>
+            <br>
+            <a href="#" class="btn btn-primary" role="button">选中</a></p>
+        </div>
+    </div>
+</div>
+
+<div class="video">
+    <video src="/video/super.mp4" height="480" width="640" controls>
+        <p>你的浏览器不支持video标签</p>
+    </video>
+</div>
 <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---
 
                                              footer
@@ -173,6 +265,7 @@
         </p>
     </div>
 </div>
+<script type="text/javascript" src="../js/vue.min.js" ></script>
 <script type="text/javascript">
     var clock = new Vue({
         el: '#clock',
@@ -181,7 +274,7 @@
             date: ''
         }
     });
-
+    var week = ['星期天', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
     var timerID = setInterval(updateTime, 1000);
     updateTime();
 
@@ -190,5 +283,13 @@
         clock.time = zeroPadding(cd.getHours(), 2) + ':' + zeroPadding(cd.getMinutes(), 2) + ':' + zeroPadding(cd.getSeconds(), 2);
         clock.date = zeroPadding(cd.getFullYear(), 4) + '-' + zeroPadding(cd.getMonth() + 1, 2) + '-' + zeroPadding(cd.getDate(), 2) + ' ' + week[cd.getDay()];
     };
+
+    function zeroPadding(num, digit) {
+        var zero = '';
+        for (var i = 0; i < digit; i++) {
+            zero += '0';
+        }
+        return (zero + num).slice(-digit);
+    }
 </script>
 </body>
