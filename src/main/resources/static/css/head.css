@@ -4,7 +4,7 @@ ul {
 
 .daohanglan {
     height: 55px;
-    margin-top: 5px;
+    margin-top: 80px;
     /*颜色从左到右进行变换*/
     background-image: linear-gradient(to right, #005cbf 0%, #28a745 100%);
     /* background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);*/

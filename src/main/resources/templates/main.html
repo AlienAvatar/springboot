@@ -13,7 +13,7 @@
     <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link href="http://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
     <script type="text/javascript" src="../js/jquery.min.js" ></script>
-    <script type="text/javascript" src="../js/main.js" ></script>
+
 
 </head>
 <body>
@@ -29,7 +29,7 @@
                 <form id="test" class="form-horizontal" role="form" action="/test/user/loginPage" method="post"
                       style="padding-left: 50px;">
                     <div class="form-group">
-                        <img src="/img/logo.png" style="display: block; padding: 20px 151px">
+                        <img src="/img/logo.jpg" style="display: block; padding: 20px 151px">
                         <div class="erweima"><img src="img/二维码.jpg" style="position: absolute;width: 130px;
 						height: 130px;bottom: 136px;right: 31px;">
                             <p style="position: absolute;right: 64px;bottom: 106px;">联系我们</p>
@@ -112,7 +112,7 @@
                      style="display: inline-block; width: 40px;height: 40px;border:0;border-radius: 40px;margin-bottom: 5px;">
                 <a id="zhuXiao" onclick="zhuXiao();location.reload();" href="#">
                 </a>
-                <button id="display1" class="btn denglu" data-toggle="modal" data-target="#myModal">登 &nbsp&nbsp出
+                <button id="display1" class="btn denglu" data-toggle="modal" data-target="#myModal" onclick="logOut()">登 &nbsp&nbsp出
                 </button> <!--触发模态框按钮-->
             </div>
         </nav>
@@ -194,15 +194,15 @@
                                            缩略图
 
 --><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
-<div class="row">
-    <div class="col-xs-3 " >
-        <a href="#" class="thumbnail">
+<div class="row" style="margin-left:30%;">
+    <div class="col-xs-3">
+        <a href="javascript:void(0);" class="thumbnail">
             <img src="http://how2j.cn/study/gareen.jpg">
         </a>
         <div class="caption">
             <div class="text-muted">德玛西亚之力</div>
             <br>
-            <p><a href="#" class="btn btn-primary" role="button">选中</a></p>
+            <p><a href="javascript:void(0);" class="btn btn-primary" role="button" onclick="changeVideo1();">选中</a></p>
         </div>
     </div>
     <div class="col-xs-3 ">
@@ -212,7 +212,7 @@
         <div class="caption">
             <div class="text-muted">黑暗之力</div>
             <br>
-            <a href="#" class="btn btn-primary" role="button">选中</a></p>
+            <a href="javascript:void(0);" class="btn btn-primary" role="button" onclick="changeVideo2();">选中</a></p>
         </div>
     </div>
     <div class="col-xs-3 ">
@@ -222,7 +222,7 @@
         <div class="caption">
             <div class="text-muted">迅捷斥候</div>
             <br>
-            <a href="#" class="btn btn-primary" role="button">选中</a></p>
+            <a href="javascript:void(0);" class="btn btn-primary" role="button" onclick="changeVideo3();">选中</a></p>
         </div>
     </div>
     <div class="col-xs-3 ">
@@ -232,14 +232,15 @@
         <div class="caption">
             <div class="text-muted">不详之刃</div>
             <br>
-            <a href="#" class="btn btn-primary" role="button">选中</a></p>
+            <a href="javascript:void(0);" class="btn btn-primary" role="button" onclick="changeVideo4();">选中</a></p>
         </div>
     </div>
 </div>
 
-<div class="video">
-    <video src="/video/super.mp4" height="480" width="640" controls>
-        <p>你的浏览器不支持video标签</p>
+<div class="video view">
+    <video class="video-fluid" height="480" width="640" controls>
+        <!--<source src="https://mdbootstrap.com/img/video/cube.mp4" type="video/mp4" />-->
+        <source src="/video/super.mp4" type="video/mp4" />
     </video>
 </div>
 <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---
@@ -266,6 +267,7 @@
     </div>
 </div>
 <script type="text/javascript" src="../js/vue.min.js" ></script>
+<script type="text/javascript" src="../js/main.js" ></script>
 <script type="text/javascript">
     var clock = new Vue({
         el: '#clock',

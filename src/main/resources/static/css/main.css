@@ -16,6 +16,7 @@
 /*缩略图*/
 .row{
     margin-top: 70px;
+
 }
 
 .row .col-xs-3 {
@@ -25,6 +26,12 @@
 div.col-xs-3{
     text-align:center;
 }
+
+.video{
+    margin-left:30%;
+}
+
+
 
 
 
