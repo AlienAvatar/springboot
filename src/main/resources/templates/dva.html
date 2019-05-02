@@ -3,10 +3,244 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/dva.css">
+    <link rel="stylesheet" href="../css/head.css">
+    <link rel="stylesheet" href="../css/foot.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href="http://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/jquery.min.js" ></script>
+
+
 </head>
 <body>
-    <p>
-        dva
-    </p>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+     style="overflow: auto;">
+    <div class="modal-dialog" style="overflow: auto;">
+        <div class="modal-content" style="overflow: auto;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="false">X</button>
+                <h4 class="modal-title" id="myModalLabel">账号密码登录</h4>
+            </div>
+            <div class="modal-body" style="position: relative;">
+                <form id="test" class="form-horizontal" role="form" action="/test/user/loginPage" method="post"
+                      style="padding-left: 50px;">
+                    <div class="form-group">
+                        <img src="/img/logo.jpg" style="display: block; padding: 20px 151px">
+                        <div class="erweima"><img src="img/二维码.jpg" style="position: absolute;width: 130px;
+						height: 130px;bottom: 136px;right: 31px;">
+                            <p style="position: absolute;right: 64px;bottom: 106px;">联系我们</p>
+                        </div>
+                        <label class="col-sm-2 control-label">
+                            <span class="glyphicon glyphicon-user">账号</span>
+                        </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="user_name" name="user_name"
+                                   placeholder="手机号/QQ号/微信" style="width: 250px">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">
+                            <span class="glyphicon glyphicon-lock">密码</span>
+                        </label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="user_password" name="user_password"
+                                   placeholder="password" style="width: 250px">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> 记住密码
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-dismiss="btn btn-default"
+                                    style="background-color: #169af3;padding: 5px 30px">登 &nbsp&nbsp&nbsp&nbsp录
+                            </button>
+                            <a href="http://localhost:8080/test/register.html" style="float: left;padding-top: 12px;">没有账号？点此注册</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+
+
+<div style="width: 100%;height: 80px; background-color:#fff;position: relative;">
+    <div style="position: absolute;bottom: -5px;height: 5px;width: 100%;background-color:#fff;z-index: -1;"></div>
+    <div class="search1">
+        <nav class="navmargin navbar navbar-default" role="navigation">
+            <div class="shurukuang" style="padding: 20.6px 30px;">
+                <form class="bs-example" role="form" action="#" method="get">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="input-group">
+                                <input type="text" id="songName" name="songName" class="form-control"
+                                       placeholder="请输入">
+                                <span class="input-group-btn">
+								 <button onclick="getList2($('#songName').serialize())" class="btn btn-default"
+                                         type="button">
+									搜索
+								</button>
+							</span>
+                            </div><!-- /input-group -->
+                        </div><!-- /.col-lg-6 -->
+                        <div id="clock">
+                            <p class="time">{{ time }}</p>
+                        </div>
+                    </div><!-- /.row -->
+                </form>
+            </div>
+            <!-- 图标加上搜索框结束 -->
+            <div id="col10" class="dengluzhuce">
+                <!-- <a class="mymusic" href="http://localhost:8080/test/mymusic.html" target="_blank">我的音乐</a>-->
+                <a class="mymusic" href="http://localhost:8080/test/mymusic.html" target="_blank">您是第<span
+                        id="user_number" style="font-size:20px;color:red;text-align:center;padding:0;"> &nbsp</span>位用户</a>
+                <span class="mymusic">|</span>
+                <img id="touxiang" src="/img/head.jpg" width="40px" height="40px"
+                     style="display: inline-block; width: 40px;height: 40px;border:0;border-radius: 40px;margin-bottom: 5px;">
+                <a id="zhuXiao" onclick="zhuXiao();location.reload();" href="#">
+                </a>
+                <button id="display1" class="btn denglu" data-toggle="modal" data-target="#myModal" onclick="logOut()">登 &nbsp&nbsp出
+                </button> <!--触发模态框按钮-->
+            </div>
+        </nav>
+    </div>
+</div>
+
+
+<!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---
+
+                                                   下方nav标签导航栏开始）
+
+--><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+<nav class="daohanglan">
+    <div class="big3">
+        <ul>
+            <li><a class="gudingbeij erjicaidan2" href="#">首页</a></li>
+            <li><a class=" erjicaidan2" href="http://localhost:8088/main/dva">DVA</a></li>
+            <li><a class="erjicaidan2" href="http://localhost:8080/test/mv.html">麦克雷</a></li>
+            <li class="dropdown">
+                <!--<a class="erjicaidan2" href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    更多 <b class="caret"></b>
+                </a>-->
+                <ul class="dropdown-menu">
+                    <li><a class="erjicaidan" href="http://localhost:8080/test/musicRadio.html">76</a></li>
+                    <li><a class="erjicaidan" href="http://localhost:8080/test/songlist.html">cs</a></li>
+                    <li><a class="erjicaidan" href="http://localhost:8080/test/singer.html">go</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li class="youfudong"><a href="http://localhost:8080/test/musicSearchTest.html" target="_blank"><span
+                    class="glyphicon glyphicon-search" style="font-size: 14px"> 搜索</span></a></li>
+            <li class="youfudong"><a href="http://localhost:8080/test/musician.html" target="_blank"><span
+                    class="glyphicon glyphicon-headphones" style="font-size: 14px"> 76</span></a></li>
+            <li class="youfudong"><span class="glyphicon glyphicon-music" style="font-size: 14px"> cs</span></li>
+            <li class="youfudong"><a href="http://localhost:8080/test/QQmusic.html" target="_blank"><span
+                    class="glyphicon glyphicon-star-empty" style="font-size: 14px"> go</span></a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+
+<!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---
+
+                                       菜单栏
+
+--><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+<div class="big clearfix">
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <span class="nonostyle" data-toggle="collapse" data-parent="#accordion"
+                          href="#collapseOne">
+                        DVA英雄
+                    </span>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <a href="">英雄技能</a>
+                    <a href="">英雄背景</a>
+                    <a href="">英雄故事</a>
+                </div>
+            </div>
+        </div>
+
+    <div class="panel-group">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <span class="nonostyle" data-toggle="collapse" data-parent="#accordion"
+                      href="#collapseTwo">
+                    麦克雷
+                </span>
+            </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse">
+            <div class="panel-body">
+                <a href="">英雄技能</a>
+                <a href="">英雄背景</a>
+                <a href="">英雄故事</a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <table style="width: 1000px; float: right; overflow: auto;">
+        <thead>
+        <tr style="border-bottom: 1px solid #919191;line-height: 35px;">
+            <th style="text-align: center;">序号</th>
+            <th style="text-align: center;">歌名</th>
+            <th style="text-align: center;">歌手</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---
+
+                                             footer
+
+--><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+<div class="footer">
+    <div class="links">
+        <a hidefocus="true" href="#" target="_blank">开发者：</a>
+        <a hidefocus="true" href="https://github.com/AlienAvatar" target="_blank"></a>
+        <a hidefocus="true" target="_blank" href="#">Alien</a>
+        <a hidefocus="true" target="_blank" href="#">Avatar</a>
+        <a hidefocus="true" href="#" target="_blank">加入我们</a>
+        <a hidefocus="true" href="#" target="_blank">广告合作</a>
+    </div>
+    <div class="copyright">
+        <p style="-moz-user-select: text;-webkit-user-select: text;-ms-user-select: text; user-select:text"> </p>
+        <p>Copyright&nbsp;&nbsp;©&nbsp;&nbsp;2019
+            <a hidefocus="true" class="office-verification"
+               href="http://netadreg.gzaic.gov.cn/ntmm/WebSear/WebLogoPub.aspx?logo=440106106022006022000209"
+               target="_blank"></a>
+        </p>
+    </div>
+</div>
 </body>
+<script type="text/javascript" src="../js/dva.js" ></script>
 </html>
