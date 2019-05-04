@@ -29,8 +29,15 @@ div.col-xs-3{
 
 .video{
     margin-left:30%;
+    width: 640px;
+    height: 480px;
+    margin-right: 0;
+    margin-bottom: 94px;
 }
 
+.carousel-caption img{
+    width: 70vmin;
+}
 
 
 

@@ -1,6 +1,7 @@
 .panel-group {
     float: left;
     width: 218px;
+    margin-left: 21%;
 }
 
 a{
@@ -26,6 +27,7 @@ a:active, a:hover {
     background: bisque;
     text-decoration: blink;
 }
+
 
 
 

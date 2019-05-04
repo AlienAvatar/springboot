@@ -19,7 +19,7 @@ function submitRegister(){
             if(data === "success") {
                 debugger;
                 alert("注册成功");
-                window.location.href = "http://localhost:8088/test";
+                window.location.href = "http://localhost:8088/index";
             }else if(data === "user"){
                 alert("用户名重复");
                 $("#login_username").val("");

@@ -128,9 +128,9 @@
 <nav class="daohanglan">
     <div class="big3">
         <ul>
-            <li><a class="gudingbeij erjicaidan2" href="#">首页</a></li>
+            <li><a class="gudingbeij erjicaidan2" href="http://localhost:8088/loginIn">首页</a></li>
             <li><a class=" erjicaidan2" href="http://localhost:8088/main/dva">英雄</a></li>
-            <li><a class="erjicaidan2" href="http://localhost:8080/test/mv.html">麦克雷</a></li>
+            <li><a class="erjicaidan2" href="http://localhost:8088/main/test">测试</a></li>
             <li class="dropdown">
                 <!--<a class="erjicaidan2" href="#" class="dropdown-toggle" data-toggle="dropdown">
                     更多 <b class="caret"></b>
@@ -178,7 +178,7 @@
             <div class="view">
                 <!--Video source-->
                 <video class="video-fluid" autoplay loop muted>
-                    <source src="https://mdbootstrap.com/img/video/Lines.mp4" type="video/mp4" />
+                    <source src="http://localhost:8088/video/banzang1.mp4" type="video/mp4" />
                 </video>
                 <div class="mask rgba-indigo-light"></div>
             </div>
@@ -186,7 +186,7 @@
             <!--Caption-->
             <div class="carousel-caption">
                 <div class="animated fadeInDown">
-                    <h3 class="h3-responsive">Light mask</h3>
+                    <img src="https://overwatch.nosdn.127.net/1/assets/img/pages/home/logo_new_0321.png" class="home-header__logo">
                 </div>
             </div>
             <!--Caption-->
@@ -199,7 +199,7 @@
             <div class="view">
                 <!--Video source-->
                 <video class="video-fluid" autoplay loop muted>
-                    <source src="https://mdbootstrap.com/img/video/animation-intro.mp4" type="video/mp4" />
+                    <source src="http://localhost:8088/video/dva1.mp4" type="video/mp4" />
                 </video>
                 <div class="mask rgba-purple-slight"></div>
             </div>
@@ -207,7 +207,7 @@
             <!--Caption-->
             <div class="carousel-caption">
                 <div class="animated fadeInDown">
-                    <h3 class="h3-responsive">Super light mask</h3>
+                    <img src="https://overwatch.nosdn.127.net/1/assets/img/pages/home/logo_new_0321.png" class="home-header__logo">
                 </div>
             </div>
             <!--Caption-->
@@ -220,7 +220,7 @@
             <div class="view">
                 <!--Video source-->
                 <video class="video-fluid" autoplay loop muted>
-                    <source src="https://mdbootstrap.com/img/video/Sail-Away.mp4" type="video/mp4" />
+                    <source src="http://localhost:8088/video/banzang3.mp4" type="video/mp4" />
                 </video>
                 <div class="mask rgba-black-strong"></div>
             </div>
@@ -228,7 +228,7 @@
             <!--Caption-->
             <div class="carousel-caption">
                 <div class="animated fadeInDown">
-                    <h3 class="h3-responsive">Strong mask</h3>
+                    <img src="https://overwatch.nosdn.127.net/1/assets/img/pages/home/logo_new_0321.png" class="home-header__logo">
                 </div>
             </div>
             <!--Caption-->
@@ -256,40 +256,40 @@
 <div class="row" style="margin-left:30%;">
     <div class="col-xs-3">
         <a href="javascript:void(0);" class="thumbnail">
-            <img src="http://how2j.cn/study/gareen.jpg">
+            <img src="http://overwatch.nos.netease.com/1/images/heroes/dva/icon-portrait.png">
         </a>
         <div class="caption">
-            <div class="text-muted">德玛西亚之力</div>
+            <div class="text-muted">dva</div>
             <br>
             <p><a href="javascript:void(0);" class="btn btn-primary" role="button" onclick="changeVideo1();">选中</a></p>
         </div>
     </div>
     <div class="col-xs-3 ">
         <a href="#" class="thumbnail">
-            <img src="http://how2j.cn/study/annie.jpg">
+            <img src="http://overwatch.nos.netease.com/1/images/heroes/hanzo/icon-portrait.png">
         </a>
         <div class="caption">
-            <div class="text-muted">黑暗之力</div>
+            <div class="text-muted">半藏</div>
             <br>
             <a href="javascript:void(0);" class="btn btn-primary" role="button" onclick="changeVideo2();">选中</a></p>
         </div>
     </div>
     <div class="col-xs-3 ">
         <a href="#" class="thumbnail">
-            <img src="http://how2j.cn/study/teemo.jpg">
+            <img src="http://overwatch.nos.netease.com/1/images/heroes/mccree/icon-portrait.png">
         </a>
         <div class="caption">
-            <div class="text-muted">迅捷斥候</div>
+            <div class="text-muted">麦克雷</div>
             <br>
             <a href="javascript:void(0);" class="btn btn-primary" role="button" onclick="changeVideo3();">选中</a></p>
         </div>
     </div>
     <div class="col-xs-3 ">
         <a href="#" class="thumbnail">
-            <img src="http://how2j.cn/study/katarina.jpg">
+            <img src="http://overwatch.nos.netease.com/1/images/heroes/reaper/icon-portrait.png">
         </a>
         <div class="caption">
-            <div class="text-muted">不详之刃</div>
+            <div class="text-muted">死神</div>
             <br>
             <a href="javascript:void(0);" class="btn btn-primary" role="button" onclick="changeVideo4();">选中</a></p>
         </div>
@@ -299,8 +299,9 @@
 <div class="video view">
     <video class="video-fluid" height="480" width="640" controls>
         <!--<source src="https://mdbootstrap.com/img/video/cube.mp4" type="video/mp4" />-->
-        <source src="/video/super.mp4" type="video/mp4" />
+        <source src="/video/dva3.mp4" type="video/mp4" />
     </video>
+    <div class="spotlight-image" style="background-image: url(&quot;http://overwatch.nos.netease.com/1/images/v2/home/overlay/dva.png&quot;);">123</div>
 </div>
 <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---
 
