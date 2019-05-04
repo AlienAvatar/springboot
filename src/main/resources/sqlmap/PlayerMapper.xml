@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.myproject.project.dao.PlayerMapper" >
+  <resultMap id="BaseResultMap" type="com.example.myproject.project.entity.Player" >
+    <id column="pkid" property="pkid" jdbcType="VARCHAR" />
+    <result column="playerId" property="playerid" jdbcType="VARCHAR" />
+    <result column="playerDop" property="playerdop" jdbcType="VARCHAR" />
+    <result column="playerRank" property="playerrank" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    pkid, playerId, playerDop, playerRank
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from player
+    where pkid = #{pkid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from player
+    where pkid = #{pkid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.example.myproject.project.entity.Player" >
+    insert into player (pkid, playerId, playerDop, 
+      playerRank)
+    values (#{pkid,jdbcType=VARCHAR}, #{playerid,jdbcType=VARCHAR}, #{playerdop,jdbcType=VARCHAR}, 
+      #{playerrank,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.myproject.project.entity.Player" >
+    insert into player
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="pkid != null" >
+        pkid,
+      </if>
+      <if test="playerid != null" >
+        playerId,
+      </if>
+      <if test="playerdop != null" >
+        playerDop,
+      </if>
+      <if test="playerrank != null" >
+        playerRank,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="pkid != null" >
+        #{pkid,jdbcType=VARCHAR},
+      </if>
+      <if test="playerid != null" >
+        #{playerid,jdbcType=VARCHAR},
+      </if>
+      <if test="playerdop != null" >
+        #{playerdop,jdbcType=VARCHAR},
+      </if>
+      <if test="playerrank != null" >
+        #{playerrank,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.myproject.project.entity.Player" >
+    update player
+    <set >
+      <if test="playerid != null" >
+        playerId = #{playerid,jdbcType=VARCHAR},
+      </if>
+      <if test="playerdop != null" >
+        playerDop = #{playerdop,jdbcType=VARCHAR},
+      </if>
+      <if test="playerrank != null" >
+        playerRank = #{playerrank,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where pkid = #{pkid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.myproject.project.entity.Player" >
+    update player
+    set playerId = #{playerid,jdbcType=VARCHAR},
+      playerDop = #{playerdop,jdbcType=VARCHAR},
+      playerRank = #{playerrank,jdbcType=VARCHAR}
+    where pkid = #{pkid,jdbcType=VARCHAR}
+  </update>
+</mapper>

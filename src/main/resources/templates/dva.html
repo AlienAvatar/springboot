@@ -13,8 +13,7 @@
     <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link href="http://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
     <script type="text/javascript" src="../js/jquery.min.js" ></script>
-
-
+    <script src="../js/bootstrap-paginator.min.js"></script>
 </head>
 <body>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
@@ -173,9 +172,8 @@
             </div>
             <div id="collapseOne" class="panel-collapse collapse in">
                 <div class="panel-body">
-                    <a href="">英雄技能</a>
-                    <a href="">英雄背景</a>
-                    <a href="">英雄故事</a>
+                    <a href="">选手数据</a>
+                    <a href="">前500</a>
                 </div>
             </div>
         </div>
@@ -191,9 +189,8 @@
             </div>
             <div id="collapseTwo" class="panel-collapse collapse">
                 <div class="panel-body">
-                    <a href="">英雄技能</a>
-                    <a href="">英雄背景</a>
-                    <a href="">英雄故事</a>
+                    <a href="">选手数据</a>
+                    <a href="">前500</a>
                 </div>
             </div>
         </div>
@@ -204,9 +201,9 @@
     <table style="width: 1000px; float: right; overflow: auto;margin-right: 14.45%">
         <thead>
         <tr style="border-bottom: 1px solid #919191;line-height: 35px;">
-            <th style="text-align: center;">英雄名字</th>
-            <th style="text-align: center;">英雄热度</th>
-            <th style="text-align: center;">英雄玩法</th>
+            <th style="text-align: center;">玩家ID</th>
+            <th style="text-align: center;">英雄熟练度</th>
+            <th style="text-align: center;">排名</th>
             <th></th>
         </tr>
         </thead>
@@ -245,5 +242,7 @@
     <ul id="pagintor"></ul>
 </div>
 </body>
+
 <script type="text/javascript" src="../js/dva.js" ></script>
+<script type="text/javascript" src="../js/tools.js" ></script>
 </html>

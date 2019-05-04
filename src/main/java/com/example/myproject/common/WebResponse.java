@@ -9,4 +9,6 @@ public class WebResponse {
     private String statusMsg;
     private String version;
     private String token;
+
+
 }

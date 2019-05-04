@@ -4,5 +4,16 @@ $(document).ready(function () {
     getList(1);
 });
 
+function getList(pageNo) {
+    $.ajax({
+        url: "/main/getList",
+        type: "POST",
+        data: "pageNo=" + pageNo,
+        success: function (data) {
+
+        }
+    })
+}
+
 
 
