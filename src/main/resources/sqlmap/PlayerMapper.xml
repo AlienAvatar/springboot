@@ -6,9 +6,10 @@
     <result column="playerId" property="playerid" jdbcType="VARCHAR" />
     <result column="playerDop" property="playerdop" jdbcType="VARCHAR" />
     <result column="playerRank" property="playerrank" jdbcType="VARCHAR" />
+    <result column="heroType" property="herotype" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    pkid, playerId, playerDop, playerRank
+    pkid, playerId, playerDop, playerRank, heroType
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select 
@@ -22,9 +23,9 @@
   </delete>
   <insert id="insert" parameterType="com.example.myproject.project.entity.Player" >
     insert into player (pkid, playerId, playerDop, 
-      playerRank)
+      playerRank, heroType)
     values (#{pkid,jdbcType=VARCHAR}, #{playerid,jdbcType=VARCHAR}, #{playerdop,jdbcType=VARCHAR}, 
-      #{playerrank,jdbcType=VARCHAR})
+      #{playerrank,jdbcType=VARCHAR}, #{herotype,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.example.myproject.project.entity.Player" >
     insert into player
@@ -41,6 +42,9 @@
       <if test="playerrank != null" >
         playerRank,
       </if>
+      <if test="herotype != null" >
+        heroType,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="pkid != null" >
@@ -54,6 +58,9 @@
       </if>
       <if test="playerrank != null" >
         #{playerrank,jdbcType=VARCHAR},
+      </if>
+      <if test="herotype != null" >
+        #{herotype,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -69,6 +76,9 @@
       <if test="playerrank != null" >
         playerRank = #{playerrank,jdbcType=VARCHAR},
       </if>
+      <if test="herotype != null" >
+        heroType = #{herotype,jdbcType=VARCHAR},
+      </if>
     </set>
     where pkid = #{pkid,jdbcType=VARCHAR}
   </update>
@@ -76,7 +86,8 @@
     update player
     set playerId = #{playerid,jdbcType=VARCHAR},
       playerDop = #{playerdop,jdbcType=VARCHAR},
-      playerRank = #{playerrank,jdbcType=VARCHAR}
+      playerRank = #{playerrank,jdbcType=VARCHAR},
+      heroType = #{herotype,jdbcType=VARCHAR}
     where pkid = #{pkid,jdbcType=VARCHAR}
   </update>
 </mapper>

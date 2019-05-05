@@ -1,14 +1,18 @@
-
 $(document).ready(function () {
-    getList(1);
+    getList(1,"dva");
     pageTools(1, 30);//tools里的方法
 });
 
-function getList(pageNo) {
+function getList(pageNo,heroType) {
+    var param = {
+        pageNo:pageNo,
+        heroType:heroType
+    };
     $.ajax({
         url: "/main/getList",
-        type: "POST",
-        data: "pageNo=" + pageNo,
+        type: "GET",
+        data: param,
+        async: false,
         success: function (data) {
             console.log(data);
             if(data.statusCode == "200"){
@@ -31,12 +35,9 @@ function getList(pageNo) {
                         + '</tr>';
                     $('table').html(str);
                 }
-                return jsonData.pages;
-                //pageTools(1,jsonData.pages);
             }else{
                 alert("无相关信息");
             }
-
         }
     })
 }

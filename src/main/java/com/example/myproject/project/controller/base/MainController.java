@@ -13,10 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
-
-import java.util.LinkedHashMap;
-import java.util.List;
 
 @Controller
 @RequestMapping("/main")
@@ -35,14 +31,15 @@ public class MainController {
         return "test";
     }
 
-    @RequestMapping(value = "/getList",method = RequestMethod.POST)
+    @RequestMapping(value = "/getList",method = RequestMethod.GET)
     @ResponseBody
     public WebResponse getDvaList(@RequestParam(defaultValue = "1", required = false) Integer pageNo,
-                                  @RequestParam(defaultValue = "10", required = false) Integer pageSize){
+                                  @RequestParam(defaultValue = "10", required = false) Integer pageSize,
+                                  @RequestParam("heroType") String heroType){
 
         String token = "";
         PageHelper.startPage(pageNo,pageSize);
-        PageInfo<Player> pageInfo = new PageInfo<>(playerService.getAllPlayers());
+        PageInfo<Player> pageInfo = new PageInfo<>(playerService.getAllPlayers(heroType));
         //List<Player> list = playerService.getAllPlayers();
         String json = JSON.toJSONString(pageInfo);
 

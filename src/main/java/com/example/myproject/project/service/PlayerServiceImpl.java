@@ -5,9 +5,5 @@ import com.github.pagehelper.Page;
 
 public interface PlayerServiceImpl {
 
-    Page<Player> getAllPlayers();
-
-    int getCountPlayers();
-
-
+    Page<Player> getAllPlayers(String heroType);
 }

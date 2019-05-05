@@ -6,8 +6,8 @@ $(document).ready(function () {
 function getList(pageNo) {
     $.ajax({
         url: "/main/getList",
-        type: "POST",
-        data: "pageNo=" + pageNo,
+        type: "GET",
+        data: "pageNo=" + pageNo + "&heroType=dva",
         success: function (data) {
             console.log(data);
             if(data.statusCode == "200"){

@@ -7,9 +7,6 @@ import com.github.pagehelper.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.UUID;
-
 @Service
 public class PlayerService implements PlayerServiceImpl {
 
@@ -18,14 +15,11 @@ public class PlayerService implements PlayerServiceImpl {
 
 
     @Override
-    public Page<Player> getAllPlayers() {
-        Page<Player> players = playerMapper.getAllPlayer();
+    public Page<Player> getAllPlayers(String heroType) {
+        if(heroType != null && heroType.equals("")){
+            heroType = "dva";
+        }
+        Page<Player> players = playerMapper.getAllPlayer(heroType);
         return players;
-    }
-
-    @Override
-    public int getCountPlayers() {
-        int count = playerMapper.getCountPlayer();
-        return count;
     }
 }

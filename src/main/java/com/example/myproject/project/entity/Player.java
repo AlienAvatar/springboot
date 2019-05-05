@@ -9,6 +9,8 @@ public class Player {
 
     private String playerrank;
 
+    private String herotype;
+
     public String getPkid() {
         return pkid;
     }
@@ -39,5 +41,13 @@ public class Player {
 
     public void setPlayerrank(String playerrank) {
         this.playerrank = playerrank;
+    }
+
+    public String getHerotype() {
+        return herotype;
+    }
+
+    public void setHerotype(String herotype) {
+        this.herotype = herotype;
     }
 }
