@@ -1,7 +1,6 @@
-
 $(document).ready(function () {
+    pageTools(1, 5);//tools里的方法
     getList(1);
-    pageTools(1, 30);//tools里的方法
 });
 
 function getList(pageNo) {
@@ -19,7 +18,7 @@ function getList(pageNo) {
                     '            <th style="text-align: center;">排名</th>\n' +
                     '            <th></th>\n' +
                     '        </tr>';
-
+                debugger;
                 var jsonData = JSON.parse(data.data);
                 for (var i = 0; i < jsonData.list.length; i++) {
                     var num = i + 1;
@@ -31,16 +30,10 @@ function getList(pageNo) {
                         + '</tr>';
                     $('table').html(str);
                 }
-                return jsonData.pages;
-                //pageTools(1,jsonData.pages);
+                //pageTools(1,30);
             }else{
                 alert("无相关信息");
             }
-
         }
     })
 }
-
-
-
-

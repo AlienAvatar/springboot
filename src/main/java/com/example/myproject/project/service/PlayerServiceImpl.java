@@ -1,10 +1,13 @@
 package com.example.myproject.project.service;
 
 import com.example.myproject.project.entity.Player;
-
-import java.util.List;
+import com.github.pagehelper.Page;
 
 public interface PlayerServiceImpl {
 
-    List<Player> getAllPlayers();
+    Page<Player> getAllPlayers();
+
+    int getCountPlayers();
+
+
 }
