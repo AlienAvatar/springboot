@@ -13,7 +13,7 @@
     <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link href="http://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
     <script type="text/javascript" src="../js/jquery.min.js" ></script>
-
+    <script type="text/javascript" src="../js/tools/jquery-ui.min.js" ></script>
 
 </head>
 <body>
@@ -86,8 +86,7 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="input-group">
-                                <input type="text" id="songName" name="songName" class="form-control"
-                                       placeholder="请输入">
+                                <input id="autocomplete" title="type &quot;a&quot;" class="ui-autocomplete-input" autocomplete="off">
                                 <span class="input-group-btn">
 								 <button onclick="getList2($('#songName').serialize())" class="btn btn-default"
                                          type="button">

@@ -16,9 +16,6 @@ public class PlayerService implements PlayerServiceImpl {
 
     @Override
     public Page<Player> getAllPlayers(String heroType) {
-        if(heroType != null && heroType.equals("")){
-            heroType = "dva";
-        }
         Page<Player> players = playerMapper.getAllPlayer(heroType);
         return players;
     }
