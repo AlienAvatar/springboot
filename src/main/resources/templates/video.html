@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Video</title>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="../css/dva.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/video.css">
     <link rel="stylesheet" href="../css/head.css">
     <link rel="stylesheet" href="../css/foot.css">
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -13,7 +13,7 @@
     <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link href="http://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
     <script type="text/javascript" src="../js/jquery.min.js" ></script>
-    <script src="../js/bootstrap-paginator.min.js"></script>
+    <script type="text/javascript" src="../js/tools/jquery-ui.min.js" ></script>
 </head>
 <body>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
@@ -155,134 +155,21 @@
     </div>
 </nav>
 
-<!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---
-
-                                       菜单栏
-
---><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
-<div class="big clearfix">
-    <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <span class="nonostyle" data-toggle="collapse" data-parent="#accordion"
-                          href="#collapseOne">
-                        DVA英雄
-                    </span>
-                </h4>
-            </div>
-            <div id="collapseOne" class="panel-collapse collapse in">
-                <div class="panel-body">
-                    <a href="javascript:void(0);" onclick="getList(1,'dva')">选手数据</a>
-                    <a href="">前500</a>
+<div>
+    <section>
+        <ul>
+            <li class="media-item m-lg" data-mp4="https://blz-videos.nosdn.127.net/1/OverWatch/AnimatedShots/Overwatch_AnimatedShot_CinematicTrailer.mp4" data-title="动画视频" data-flv="https://blz-videos.nosdn.127.net/1/OverWatch/AnimatedShots/Overwatch_AnimatedShot_CinematicTrailer.mp4">
+                <div class="media-border">
+                    <a href="javascript:;" style="background-image: url(http://overwatch.nos.netease.com/2/media/gameplay/cinematic-trailer.32Pn2.jpg)" title="动画视频" class="media-content m-video"><div class="m-media-wp-span">动画视频</div></a>
                 </div>
-            </div>
-        </div>
-
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <span class="nonostyle" data-toggle="collapse" data-parent="#accordion"
-                          href="#collapseTwo">
-                        麦克雷
-                    </span>
-                </h4>
-            </div>
-            <div id="collapseTwo" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <a href="javascript:void(0);" onclick="getList(1,'macRae')">选手数据</a>
-                    <a href="">前500</a>
+            </li>
+            <li class="media-item m-lg" data-mp4="http://flv.bn.netease.com/videolib3/1511/07/CoPrF6333/HD/CoPrF6333-mobile.mp4" data-title="游戏视频2" data-flv="pltype=7&amp;topicid=0031&amp;vid=VB6RTC3SU&amp;sid=VAS3NO00J&amp;coverpic=http://vimg1.ws.126.net/image/snapshot/2015/11/S/V/VB6RTC3SV.jpg&amp;autoplay=true&amp;showend=false&amp;hiddenR=true">
+                <div class="media-border">
+                    <a href="javascript:;" style="background-image: url(http://overwatch.nos.netease.com/2/media/videos/gameplay.jpg)" title="游戏视频2" class="media-content m-video"><div class="m-media-wp-span">游戏视频2</div></a>
                 </div>
-            </div>
-        </div>
-
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <span class="nonostyle" data-toggle="collapse" data-parent="#accordion"
-                          href="#collapseThree">
-                        半藏
-                    </span>
-                </h4>
-            </div>
-            <div id="collapseThree" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <a href="javascript:void(0);" onclick="getList(1,'banzang')">选手数据</a>
-                    <a href="">前500</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <span class="nonostyle" data-toggle="collapse" data-parent="#accordion"
-                          href="#collapseFour">
-                        死神
-                    </span>
-                </h4>
-            </div>
-            <div id="collapseFour" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <a href="javascript:void(0);" onclick="getList(1,'death')">选手数据</a>
-                    <a href="">前500</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <table style="width: 1000px; float: right; overflow: auto;margin-right: 14.45%">
-        <thead>
-        <tr style="border-bottom: 1px solid #919191;line-height: 35px;">
-            <th style="text-align: center;">玩家ID</th>
-            <th style="text-align: center;">英雄熟练度</th>
-            <th style="text-align: center;">排名</th>
-            <th></th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-        </tr>
-        </tbody>
-    </table>
+            </li>
+        </ul>
+    </section>
 </div>
-<!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---
-
-                                             分页插件
-
---><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
-<div style="position: absolute;bottom: 0;left: 50%;" class="col-sm-12">
-    <ul id="pagintor"></ul>
-</div>
-
-<!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---
-
-                                             footer
-
---><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
-<!--<div class="footer">
-    <div class="links">
-        <a hidefocus="true" href="#" target="_blank">开发者：</a>
-        <a hidefocus="true" href="https://github.com/AlienAvatar" target="_blank"></a>
-        <a hidefocus="true" target="_blank" href="#">Alien</a>
-        <a hidefocus="true" target="_blank" href="#">Avatar</a>
-        <a hidefocus="true" href="#" target="_blank">加入我们</a>
-        <a hidefocus="true" href="#" target="_blank">广告合作</a>
-    </div>
-    <div class="copyright">
-        <p style="-moz-user-select: text;-webkit-user-select: text;-ms-user-select: text; user-select:text"> </p>
-        <p>Copyright&nbsp;&nbsp;©&nbsp;&nbsp;2019
-            <a hidefocus="true" class="office-verification"
-               href="http://netadreg.gzaic.gov.cn/ntmm/WebSear/WebLogoPub.aspx?logo=440106106022006022000209"
-               target="_blank"></a>
-        </p>
-    </div>
-</div>-->
-
 </body>
-
-<script type="text/javascript" src="../js/dva.js" ></script>
-<script type="text/javascript" src="../js/tools.js" ></script>
 </html>

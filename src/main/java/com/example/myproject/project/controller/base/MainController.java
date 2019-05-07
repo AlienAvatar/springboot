@@ -51,4 +51,9 @@ public class MainController {
         }
         return response;
     }
+
+    @RequestMapping(value = "/video", method = RequestMethod.GET, produces = "application/json;charset=UTF-8")
+    public String getVideo(){
+        return "video";
+    }
 }
