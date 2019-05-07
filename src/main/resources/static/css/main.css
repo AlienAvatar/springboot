@@ -28,18 +28,23 @@ div.col-xs-3{
 }
 
 .video{
-    margin-left:30%;
-    width: 640px;
-    height: 480px;
+    width: 100%;
+    height: 737px;
     margin-right: 0;
-    margin-bottom: 94px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-around;
 }
 
 .carousel-caption img{
     width: 70vmin;
 }
 
-
+.spotlight-image{
+    background-image: url('http://overwatch.nos.netease.com/1/images/v2/home/overlay/dva.png');
+    width: 42%;
+    background-repeat: no-repeat;
+}
 
 
 
